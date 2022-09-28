@@ -1,0 +1,892 @@
+@font-face {
+    font-family: code;
+    src: url(../Font/code/CODE\ Bold.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+.body {
+    width: 100vw;
+    height: 100%;
+    background-color: #05AFF2;
+    display: grid;
+    grid-template-columns: .5fr .8fr 1fr;
+    grid-template-rows: 640px 1fr 30px;
+    grid-template-areas: "header header header"
+                        "main main main"
+                        "footer footer footer";
+}
+.body__header {
+    width: 100%;
+    background: url(../Image/background\ header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-area: header;
+}
+.nav-link {
+    margin-left: 100px;
+    padding-top: 20PX;
+}
+.nav-link:hover {
+    opacity: 50%;
+}
+.sd {
+    position: absolute;
+    right: 41.7%;
+    bottom: 90px;
+    color: black;
+}
+.chevron {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 45%;
+    bottom: 45px;
+}
+
+.main1 {
+    min-width: 100vw;
+    min-height: 1550px;
+    background-color: #056CF2;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: .5fr 395px 1fr;
+    grid-template-rows: 640px 640px 640px;
+    grid-template-areas:
+                        "eh eh eh"
+                        "video video video"
+                        "art art art";
+}
+
+.main__eventoshoy {
+    background-color: whitesmoke;
+    grid-area: eh;
+    display: flex;
+}
+.titunove {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-top: 220px;
+    position: absolute;
+    right: 150px;
+}
+#parstephan {
+    color: black;
+    padding-top: 260px;
+    padding-left: 155px;
+}
+#botonste {
+    background-color: black;
+    margin-left: 155px;
+}
+#botonste:hover {
+    opacity: 50%;
+}
+.main__video {
+    background-color: black;
+    grid-area: video;   
+}
+.subtitnov {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    padding-top: 160px;
+    position: absolute;
+    left: 55px;
+}
+.texthoy {
+    color: whitesmoke;
+    margin-top: 200px;
+    margin-left: 55px;
+}
+#botoncat {
+    background-color: whitesmoke;
+    color: black;
+    margin-left: 55px;
+}
+#botoncat:hover {
+    opacity: 50%;
+}
+.carousel-item {
+    width: auto;
+    height: 825px;
+    max-height: 825px;
+}
+h5 {
+    font-size: 1rem;
+    color: black;
+}
+#parrafnovedades p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: lighter;
+    font-size: 1rem;
+    padding-top: 280px;
+    position: absolute;
+    right: 165px;
+}
+.listanovedades {
+    text-decoration: none;
+    font-family: code;
+    padding-top: 10px;
+    padding-left: 25px;
+    list-style: none;
+    display: none;
+}
+.main__artista {
+    background-color: black;
+    grid-area: art; 
+    display: flex;
+}
+.card {
+    margin: 50px;
+}
+.btn {
+    background-color: black; 
+}
+.btn:hover {
+    opacity: 50%;
+    background-color: gray;
+}
+
+.fotoindex {
+    width: 610px;
+    height: 420px;
+    border-radius: 20px;
+    float: left;
+    margin: 10px;
+}
+.artistatitulo {
+    margin-left: 295px;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    font-family: code;
+}
+.artistaparrafo {
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-size: .5rem;
+    font-family: code;
+}
+.fotoevento {
+    width: 730px;
+    height: 630px;
+    float: right;
+}
+.tituloeventohoy {
+    text-align: left;
+    text-decoration: none;
+    font-family: code;
+    font-weight: bold;
+    padding-top: 5px;
+    font-size: 1.2rem;
+    display: none;
+}
+.main__video2 {
+    grid-area: video2;
+    display: none;
+}
+.ws {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 50%;
+    right: 10px;
+    z-index: 1;
+    border-radius: 60%;
+}
+#footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 150px;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.pie {
+    margin-bottom: 0;
+    padding-left: 20px;
+    font-family: code;
+    padding-top: 60px;
+    font-size: 0.4rem;
+}
+#titredes {
+    display: flex;
+    align-items: flex-end;
+    margin-left: 1020px;
+    font-family: code;
+    font-size: 1rem;
+}
+#ig {
+    width: 40px;
+    height: 40px;
+    margin-top: 105px;
+}
+#twit {
+    width: 40px;
+    height: 40px;
+    margin-top: 105px;
+}
+#face {
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+    margin-top: 105px;
+}
+.form {
+    padding-top: 50px;
+    padding-left: 200px;
+    padding-right: 200px;
+    font-family: code;
+}
+.bodycont {
+    width: 100vw;
+    height: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: .5fr .8fr 1fr;
+    grid-template-rows: 90px 700px 30px;
+    grid-template-areas: "header header header"
+                        "main main main"
+                        "footer footer footer";
+}
+.body__headerdos {
+    width: 100vw;
+    height: 90px;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    grid-area: header;
+}
+#legend {
+    text-align: center;
+    font-size: 1.2rem;
+}
+#nombre {
+    font-size: .8rem;
+}
+.nombrecajon {
+    border-radius: 5px;
+    margin-top: 10px;
+    border-style: hidden;
+    padding-left: 5px;
+    font-size: .5rem;
+}
+#email {
+    font-size: .8rem;
+}
+.emailcajon {
+    border-radius: 5px;
+    margin-top: 20px;
+    border-style: hidden;
+    padding-left: 5px;
+    font-size: .8rem;
+}
+#nacimiento {
+    font-size: .8rem;
+}
+.naccajon {
+    border-radius: 5px;
+    margin-top: 20px;
+    border-style: hidden;
+    padding-left: 20px;
+    font-size: .8rem;
+}
+.coment {
+    margin-left: 70px;
+    border-radius: 5px;
+    border-style: hidden;
+}
+#titcoment {
+    margin-left: 70px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: .7rem;
+}
+.fieldset {
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    color: white;
+    font-weight: lighter;
+    font-size: .5rem;
+}
+.enviar {
+    margin-left: 43%;
+    font-size: .7rem;
+    border-color: white;
+    border-radius: 5px;
+}
+.reset {
+    margin-left: 10px;
+    font-size: .7rem;
+    border-color: white;
+    border-radius: 5px;
+}
+#titopciones {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: .8rem;
+}
+#re {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+#ni {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+#niahi {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+#nise {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.main2 {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: black;
+    grid-area: main;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "form";
+}
+#formcont {
+    grid-area: form;
+}
+.bodynov {
+    width: 100vw;
+    height: 100%;
+    background-color: #05AFF2;
+    display: grid;
+    grid-template-columns: .5fr .8fr 1fr;
+    grid-template-rows: 90px 1fr 30px;
+    grid-template-areas: "header header header"
+                        "main main main"
+                        "footer footer footer";
+}
+.main3 {
+    width: 100vw;
+    height: 100%;
+    background-color: black;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px 380px 450px 1fr;
+    grid-template-areas: "sec1" 
+                        "sec1b"
+                        "sec2" 
+                        "sec2b";
+}
+#sec1 {
+    grid-area: sec1;
+    display: flex;
+    justify-content: center;
+}
+#imgsec1 {
+    width: 450px;
+    height: 450px;
+    justify-items: center;
+    margin-top: 50px;
+}
+#sec1b {
+    grid-area: sec1b;
+    display: flex;
+    color: whitesmoke;
+    margin: 50px;
+}
+#psec1b {
+    font-size: .7rem;
+}
+#sec2 {
+    grid-area: sec2;
+    display: flex;
+    justify-content: center;
+}
+#imgsec2 {
+    width: 700px;
+    height: 400px;
+    justify-items: center;
+    margin-top: 50px;
+}
+#sec2b {
+    grid-area: sec2b;
+    display: flex;
+    color: whitesmoke;
+    margin: 50px;
+}
+#titcat {
+    padding: 15px;
+}
+#psec2b {
+    font-size: .7rem;
+}
+
+@media only screen and (max-width: 1200px) {
+
+} 
+
+@media only screen and (max-width: 768px) {
+
+} 
+
+@media only screen and (max-width: 320px) {
+
+    .body {
+        width: 100vw;
+        height: 100%;
+        background-color: #05AFF2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr 30px;
+        grid-template-areas: "header"
+                            "main"
+                            "footer";
+
+    }
+    .body__header {
+        width: 100%;
+        background: url(../Image/background\ header.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        grid-area: header;
+    }
+    .nav-link {
+        padding-top: 20PX;
+        font-size: .5rem;
+        font-weight: bold;
+    }
+    .nav-link:hover {
+        opacity: 50%;
+    }
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    .sd {
+        position: absolute;
+        right: 41.7%;
+        bottom: 190px;
+        color: black;
+        display: none;
+    }
+    .chevron {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 45%;
+        bottom: 370px;
+    }
+    
+    .main1 {
+        min-width: 100vw;
+        min-height: 100%;
+        background-color: #056CF2;
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 480px 530px;
+        grid-template-areas:
+                            "eh"
+                            "video";
+    }
+    
+    .main__eventoshoy {
+        background-color: whitesmoke;
+        grid-area: eh;
+        position: relative;
+    }
+    .imagennovedades1 {
+        width: 280px;
+        height: 280px;
+        margin-left: 20px;
+        margin-top: 15px;    
+    }
+    .titunove {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        font-size: .7rem;
+        padding-top: 320px;
+        position: absolute;
+        right: 52px;
+    }
+    #parstephan {
+        color: black;
+        padding-top: 360px;
+        font-size: .7rem;
+        position: absolute;
+        left: -105px;
+        padding-right: 50px;
+    }
+    #botonste {
+        background-color: black;
+        margin-bottom: 100px;
+        display: none;
+    }
+    #botonste:hover {
+        opacity: 50%;
+        display: none;
+    }
+    .main__video {
+        background-color: black;
+        grid-area: video; 
+    }
+    .fotoevento {
+        width: 280px;
+        height: 220px;
+        margin-right: 20px;
+        margin-top: 15px;
+    }
+    .subtitnov {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        color: whitesmoke;
+        font-size: .7rem;
+        padding-top: 270px;
+        position: absolute;
+        left: 47px;
+    }
+    .texthoy {
+        color: whitesmoke;
+        margin-top: 300px;
+        margin-left: 45px;
+        margin-right: 25px;
+        font-size: .7rem;
+    }
+    #botoncat {
+        background-color: whitesmoke;
+        color: black;
+        margin-left: 55px;
+        display: none;
+    }
+    #botoncat:hover {
+        opacity: 50%;
+        display: none;
+    }
+    .carousel-item {
+        width: auto;
+        height: 825px;
+        max-height: 825px;
+        display: none;
+    }
+    h5 {
+        font-size: 1rem;
+        color: black;
+        display: none;
+    }
+    #parrafnovedades p {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: lighter;
+        font-size: 1rem;
+        padding-top: 280px;
+        position: absolute;
+        right: 165px;
+        display: none;
+    }
+    .main__artista {
+        background-color: black;
+        grid-area: art; 
+        display: none;
+    }
+    .card {
+        margin: 50px;
+        display: none;
+
+    }
+    .btn {
+        background-color: black;
+        display: none; 
+    }
+    .btn:hover {
+        opacity: 50%;
+        background-color: gray;
+        display: none;
+    }
+    .ws {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        bottom: 50%;
+        right: 10px;
+        z-index: 1;
+        border-radius: 60%;
+        display: none;
+    }
+    #footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        height: 150px;
+        background: rgb(131,58,180);
+        background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    }
+    .pie {
+        margin-bottom: 0;
+        padding-left: 20px;
+        font-family: code;
+        padding-top: 60px;
+        font-size: 0.4rem;
+    }
+    #titredes {
+        display: flex;
+        align-items: center;
+        margin-left: 120px;
+        margin-top: 50px;
+        font-family: code;
+        font-size: .5rem;
+
+
+    }
+    #ig {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        margin-right: 190px;
+    }
+    #twit {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        right: 0;
+        margin-right: 140px;
+    }
+    #face {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        margin-right: 30px;
+        right: 0;
+        margin-right: 90px;
+    }
+    .form {
+        padding-top: 50px;
+        padding-left: 200px;
+        padding-right: 200px;
+        font-family: code;
+        display: none;
+    }
+
+    
+    .bodycont {
+        width: 100vw;
+        height: 100%;
+        background-color: black;
+        display: grid;
+        grid-template-columns: .5fr .8fr 1fr;
+        grid-template-rows: 90px 700px 30px;
+        grid-template-areas: "header header header"
+                            "main main main"
+                            "footer footer footer";
+        display: none;
+    }
+    .body__headerdos {
+        width: 100vw;
+        height: 90px;
+        background: rgb(131,58,180);
+        background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        grid-area: header;
+
+    }
+    #legend {
+        text-align: center;
+        font-size: 1.2rem;
+        display: none;
+    }
+    #nombre {
+        font-size: .8rem;
+        display: none;
+    }
+    .nombrecajon {
+        border-radius: 5px;
+        margin-top: 10px;
+        border-style: hidden;
+        padding-left: 5px;
+        font-size: .5rem;
+        display: none;
+    }
+    #email {
+        font-size: .8rem;
+        display: none;
+    }
+    .emailcajon {
+        border-radius: 5px;
+        margin-top: 20px;
+        border-style: hidden;
+        padding-left: 5px;
+        font-size: .8rem;
+        display: none;
+    }
+    #nacimiento {
+        font-size: .8rem;
+
+    }
+    .naccajon {
+        border-radius: 5px;
+        margin-top: 20px;
+        border-style: hidden;
+        padding-left: 20px;
+        font-size: .8rem;
+    }
+    .coment {
+        margin-left: 70px;
+        border-radius: 5px;
+        border-style: hidden;
+    }
+    #titcoment {
+        margin-left: 70px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        font-size: .7rem;
+    }
+    .fieldset {
+        border-radius: 20px;
+        padding-left: 15px;
+        padding-bottom: 15px;
+        color: white;
+        font-weight: lighter;
+        font-size: .5rem;
+    }
+    .enviar {
+        margin-left: 43%;
+        font-size: .7rem;
+        border-color: white;
+        border-radius: 5px;
+    }
+    .reset {
+        margin-left: 10px;
+        font-size: .7rem;
+        border-color: white;
+        border-radius: 5px;
+    }
+    #titopciones {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: .8rem;
+    }
+    #re {
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    #ni {
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    #niahi {
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    #nise {
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    .main2 {
+        min-width: 100vw;
+        min-height: 100vh;
+        background-color: black;
+        grid-area: main;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "form";
+    }
+    #formcont {
+        grid-area: form;
+    }
+
+    .bodynov {
+        width: 100vw;
+        height: 100%;
+        background-color: #05AFF2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 90px 1fr 30px;
+        grid-template-areas: "header"
+                            "main"
+                            "footer";
+
+    }
+    .main3 {
+        width: 100vw;
+        height: 100%;
+        background-color: black;
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 330px 500px 295px 450px;
+        grid-template-areas: "sec1" 
+                            "sec1b"
+                            "sec2" 
+                            "sec2b";
+
+    }
+    #sec1 {
+        grid-area: sec1;
+        display: flex;
+        justify-content: center;
+    }
+    #imgsec1 {
+        width: 290px;
+        height: 290px;
+        justify-items: center;
+        margin-top: 30px;
+
+    }
+    #sec1b {
+        grid-area: sec1b;
+        display: flex;
+        color: whitesmoke;
+        margin-top: 100px;
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+    #psec1b {
+        font-size: .4rem;
+        margin-top: -20px;
+
+    }
+    #sec2 {
+        grid-area: sec2;
+        display: flex;
+        justify-content: center;
+
+    }
+    #imgsec2 {
+        width: 310px;
+        height: 230px;
+        justify-items: center;
+        margin-top: 50px;
+
+    }
+    #sec2b {
+        grid-area: sec2b;
+        display: flex;
+        color: whitesmoke;
+        margin-top: 90px;
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+    #titcat {
+        position: absolute;
+        font-size: 1rem;
+        margin-left: 40px;
+        margin-top: -105px;
+    }
+    #psec2b {
+        font-size: .4rem;
+
+    }
+}
